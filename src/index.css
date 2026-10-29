@@ -1,0 +1,44 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --font-quran: "Scheherazade New", "Amiri Quran", serif;
+  --font-urdu: "Noto Nastaliq Urdu", "Scheherazade New", serif;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *, *::before, *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+.font-quran-text {
+  font-family: var(--font-quran);
+  line-height: 2.45;
+  word-spacing: 0.06em;
+  font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+}
+
+.font-urdu-text {
+  font-family: var(--font-urdu);
+  line-height: 2.55;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}

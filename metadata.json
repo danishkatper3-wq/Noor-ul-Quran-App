@@ -1,0 +1,6 @@
+{
+  "name": "Noor Al-Quran",
+  "description": "Authentic Quran reader, Fateh Muhammad Jalandhry Urdu & English translations, audio recitation, Tajweed learning, Hifz tracker, and source-grounded AI Tafsir study companion.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
